@@ -21,7 +21,7 @@
 		A9B53B161C3AC0BE00ABC6F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B67B8A1C3AAEA200373FFD /* Main.storyboard */; };
 		A9B53B181C3AC0BE00ABC6F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B67B831C3AAEA200373FFD /* AppDelegate.m */; };
 		A9B53B191C3AC0BE00ABC6F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B67B871C3AAEA200373FFD /* main.m */; };
-		A9B53B1A1C3AC0BE00ABC6F6 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B67B851C3AAEA200373FFD /* DemoViewController.m */; };
+		A9B53B1A1C3AC0BE00ABC6F6 /* DemoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9B67B851C3AAEA200373FFD /* DemoViewController.mm */; };
 		A9B53B2F1C3AC15200ABC6F6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B67B761C3AAE9800373FFD /* Icon.png */; };
 		A9B53B301C3AC15200ABC6F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B67B771C3AAE9800373FFD /* Main.storyboard */; };
 		A9B53B311C3AC15200ABC6F6 /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B67B751C3AAE9800373FFD /* Default~ipad.png */; };
@@ -29,10 +29,19 @@
 		A9B53B341C3AC15200ABC6F6 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B67B6F1C3AAE9800373FFD /* DemoViewController.m */; };
 		A9B53B351C3AC15200ABC6F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B67B6C1C3AAE9800373FFD /* AppDelegate.m */; };
 		A9B53B361C3AC15200ABC6F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B67B711C3AAE9800373FFD /* main.m */; };
+		B03DFB632922F21B0012E4C4 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03DFA6D2922F21A0012E4C4 /* imgui_widgets.cpp */; };
+		B03DFB6B2922F21B0012E4C4 /* glsl_shader.vert in Resources */ = {isa = PBXBuildFile; fileRef = B03DFA852922F21A0012E4C4 /* glsl_shader.vert */; };
+		B03DFB6C2922F21B0012E4C4 /* generate_spv.sh in Resources */ = {isa = PBXBuildFile; fileRef = B03DFA862922F21A0012E4C4 /* generate_spv.sh */; };
+		B03DFB6D2922F21B0012E4C4 /* glsl_shader.frag in Resources */ = {isa = PBXBuildFile; fileRef = B03DFA872922F21A0012E4C4 /* glsl_shader.frag */; };
+		B03DFB712922F21B0012E4C4 /* imgui_impl_vulkan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03DFA8D2922F21A0012E4C4 /* imgui_impl_vulkan.cpp */; };
+		B03DFB822922F21B0012E4C4 /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03DFAA22922F21A0012E4C4 /* imgui.cpp */; };
+		B03DFBF22922F21B0012E4C4 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03DFB472922F21B0012E4C4 /* imgui_tables.cpp */; };
+		B03DFBF42922F21B0012E4C4 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03DFB492922F21B0012E4C4 /* imgui_draw.cpp */; };
+		B0BF180229230BB10097040F /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B0BF17FF29230B320097040F /* imgui_impl_osx.mm */; };
+		B0BF180429230BF50097040F /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BF180329230BF50097040F /* GameController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A904B5301C9A08C90008C013 /* cube.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cube.c; sourceTree = "<group>"; };
 		A904B5311C9A08C90008C013 /* cube.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cube.frag; sourceTree = "<group>"; };
 		A904B5331C9A08C90008C013 /* cube.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cube.vert; sourceTree = "<group>"; };
 		A93DBF4B24A2A4D500079F64 /* Cube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cube.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,13 +64,31 @@
 		A9B67B821C3AAEA200373FFD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9B67B831C3AAEA200373FFD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A9B67B841C3AAEA200373FFD /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
-		A9B67B851C3AAEA200373FFD /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		A9B67B851C3AAEA200373FFD /* DemoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DemoViewController.mm; sourceTree = "<group>"; };
 		A9B67B861C3AAEA200373FFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9B67B871C3AAEA200373FFD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9B67B881C3AAEA200373FFD /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		A9B67B8A1C3AAEA200373FFD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A9B67B8B1C3AAEA200373FFD /* macOS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = macOS.xcassets; sourceTree = "<group>"; };
 		A9B734FE2576E04000455E2A /* Cube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cube.entitlements; sourceTree = "<group>"; };
+		B03DFA4C2922F1120012E4C4 /* cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cube.cpp; path = "../../../External/Vulkan-Tools/cube/cube.cpp"; sourceTree = "<group>"; };
+		B03DFA6A2922F21A0012E4C4 /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui.h; sourceTree = "<group>"; };
+		B03DFA6B2922F21A0012E4C4 /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_textedit.h; sourceTree = "<group>"; };
+		B03DFA6C2922F21A0012E4C4 /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imconfig.h; sourceTree = "<group>"; };
+		B03DFA6D2922F21A0012E4C4 /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_widgets.cpp; sourceTree = "<group>"; };
+		B03DFA6E2922F21A0012E4C4 /* imstb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imstb_truetype.h; sourceTree = "<group>"; };
+		B03DFA852922F21A0012E4C4 /* glsl_shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = glsl_shader.vert; sourceTree = "<group>"; };
+		B03DFA862922F21A0012E4C4 /* generate_spv.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_spv.sh; sourceTree = "<group>"; };
+		B03DFA872922F21A0012E4C4 /* glsl_shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = glsl_shader.frag; sourceTree = "<group>"; };
+		B03DFA8D2922F21A0012E4C4 /* imgui_impl_vulkan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_impl_vulkan.cpp; sourceTree = "<group>"; };
+		B03DFA942922F21A0012E4C4 /* imgui_impl_vulkan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_vulkan.h; sourceTree = "<group>"; };
+		B03DFAA22922F21A0012E4C4 /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui.cpp; sourceTree = "<group>"; };
+		B03DFB3B2922F21B0012E4C4 /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_internal.h; sourceTree = "<group>"; };
+		B03DFB472922F21B0012E4C4 /* imgui_tables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_tables.cpp; sourceTree = "<group>"; };
+		B03DFB492922F21B0012E4C4 /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imgui_draw.cpp; sourceTree = "<group>"; };
+		B0BF17FF29230B320097040F /* imgui_impl_osx.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = imgui_impl_osx.mm; sourceTree = "<group>"; };
+		B0BF180029230B320097040F /* imgui_impl_osx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgui_impl_osx.h; sourceTree = "<group>"; };
+		B0BF180329230BF50097040F /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BF180429230BF50097040F /* GameController.framework in Frameworks */,
 				A991E27824FD543A00D968D4 /* MoltenVK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,7 +146,8 @@
 		A904B52C1C9A08C80008C013 /* cube */ = {
 			isa = PBXGroup;
 			children = (
-				A904B5301C9A08C90008C013 /* cube.c */,
+				B03DFA502922F21A0012E4C4 /* imgui */,
+				B03DFA4C2922F1120012E4C4 /* cube.cpp */,
 				A904B5311C9A08C90008C013 /* cube.frag */,
 				A904B5331C9A08C90008C013 /* cube.vert */,
 			);
@@ -160,7 +189,7 @@
 				A9B67B821C3AAEA200373FFD /* AppDelegate.h */,
 				A9B67B831C3AAEA200373FFD /* AppDelegate.m */,
 				A9B67B841C3AAEA200373FFD /* DemoViewController.h */,
-				A9B67B851C3AAEA200373FFD /* DemoViewController.m */,
+				A9B67B851C3AAEA200373FFD /* DemoViewController.mm */,
 				A9B67B861C3AAEA200373FFD /* Info.plist */,
 				A9B67B871C3AAEA200373FFD /* main.m */,
 				A9B67B881C3AAEA200373FFD /* Prefix.pch */,
@@ -181,9 +210,50 @@
 		A9C2ABA82185085B00DDBC03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0BF180329230BF50097040F /* GameController.framework */,
 				A991E27524FD543A00D968D4 /* MoltenVK.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B03DFA502922F21A0012E4C4 /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				B03DFA6A2922F21A0012E4C4 /* imgui.h */,
+				B03DFA6B2922F21A0012E4C4 /* imstb_textedit.h */,
+				B03DFA6C2922F21A0012E4C4 /* imconfig.h */,
+				B03DFA6D2922F21A0012E4C4 /* imgui_widgets.cpp */,
+				B03DFA6E2922F21A0012E4C4 /* imstb_truetype.h */,
+				B03DFA6F2922F21A0012E4C4 /* backends */,
+				B03DFAA22922F21A0012E4C4 /* imgui.cpp */,
+				B03DFB3B2922F21B0012E4C4 /* imgui_internal.h */,
+				B03DFB472922F21B0012E4C4 /* imgui_tables.cpp */,
+				B03DFB492922F21B0012E4C4 /* imgui_draw.cpp */,
+			);
+			name = imgui;
+			path = "../../../External/Vulkan-Tools/cube/imgui";
+			sourceTree = "<group>";
+		};
+		B03DFA6F2922F21A0012E4C4 /* backends */ = {
+			isa = PBXGroup;
+			children = (
+				B0BF180029230B320097040F /* imgui_impl_osx.h */,
+				B0BF17FF29230B320097040F /* imgui_impl_osx.mm */,
+				B03DFA842922F21A0012E4C4 /* vulkan */,
+				B03DFA8D2922F21A0012E4C4 /* imgui_impl_vulkan.cpp */,
+				B03DFA942922F21A0012E4C4 /* imgui_impl_vulkan.h */,
+			);
+			path = backends;
+			sourceTree = "<group>";
+		};
+		B03DFA842922F21A0012E4C4 /* vulkan */ = {
+			isa = PBXGroup;
+			children = (
+				B03DFA852922F21A0012E4C4 /* glsl_shader.vert */,
+				B03DFA862922F21A0012E4C4 /* generate_spv.sh */,
+				B03DFA872922F21A0012E4C4 /* glsl_shader.frag */,
+			);
+			path = vulkan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +356,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03DFB6D2922F21B0012E4C4 /* glsl_shader.frag in Resources */,
+				B03DFB6C2922F21B0012E4C4 /* generate_spv.sh in Resources */,
+				B03DFB6B2922F21B0012E4C4 /* glsl_shader.vert in Resources */,
 				A9B53B151C3AC0BE00ABC6F6 /* macOS.xcassets in Resources */,
 				A9B53B161C3AC0BE00ABC6F6 /* Main.storyboard in Resources */,
 			);
@@ -319,9 +392,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03DFB822922F21B0012E4C4 /* imgui.cpp in Sources */,
+				B03DFBF22922F21B0012E4C4 /* imgui_tables.cpp in Sources */,
+				B03DFB712922F21B0012E4C4 /* imgui_impl_vulkan.cpp in Sources */,
 				A9B53B181C3AC0BE00ABC6F6 /* AppDelegate.m in Sources */,
+				B03DFB632922F21B0012E4C4 /* imgui_widgets.cpp in Sources */,
 				A9B53B191C3AC0BE00ABC6F6 /* main.m in Sources */,
-				A9B53B1A1C3AC0BE00ABC6F6 /* DemoViewController.m in Sources */,
+				A9B53B1A1C3AC0BE00ABC6F6 /* DemoViewController.mm in Sources */,
+				B0BF180229230BB10097040F /* imgui_impl_osx.mm in Sources */,
+				B03DFBF42922F21B0012E4C4 /* imgui_draw.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +552,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					_DEBUG,
+					VK_USE_PLATFORM_METAL_EXT,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
@@ -502,6 +582,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = VK_USE_PLATFORM_METAL_EXT;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

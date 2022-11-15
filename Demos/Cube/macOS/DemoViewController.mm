@@ -20,19 +20,17 @@
 #import <QuartzCore/CAMetalLayer.h>
 
 #include <MoltenVK/mvk_vulkan.h>
-#include "../../Vulkan-Tools/cube/cube.c"
-
+#include "../../Vulkan-Tools/cube/cube.cpp"
 
 #pragma mark -
 #pragma mark DemoViewController
 
 @implementation DemoViewController {
 	CVDisplayLinkRef	_displayLink;
-	struct demo demo;
+	Demo demo;
 }
 
 -(void) dealloc {
-	demo_cleanup(&demo);
 	CVDisplayLinkRelease(_displayLink);
 	[super dealloc];
 }
@@ -45,7 +43,7 @@
 
 	const char* argv[] = { "cube" };
 	int argc = sizeof(argv)/sizeof(char*);
-	demo_main(&demo, self.view.layer, argc, argv);
+	demo_main(demo, self.view, self.view.layer, argc, argv);
 
 	CVDisplayLinkCreateWithActiveCGDisplays(&_displayLink);
 	CVDisplayLinkSetOutputCallback(_displayLink, &DisplayLinkCallback, &demo);
@@ -62,7 +60,7 @@ static CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink,
 									CVOptionFlags flagsIn,
 									CVOptionFlags* flagsOut,
 									void* target) {
-	demo_draw((struct demo*)target);
+	((Demo*)target)->draw();
 	return kCVReturnSuccess;
 }
 
